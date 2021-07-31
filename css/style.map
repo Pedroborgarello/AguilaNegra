@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../scss/style.scss",
+		"../scss/_main.scss",
+		"../scss/_variables.scss"
+	],
+	"sourcesContent": [
+		"@import \"main\";\r\n@import \"variables\";",
+		"body{\r\n    box-sizing: border-box;\r\n    font-family: 'Baloo Tammudu 2', cursive;\r\n    background-image: linear-gradient(to left bottom, #160b23, #180e26, #1a1028, #1c122b, #1f142e, #21162f, #241930, #261b31, #281f30, #292330, #2b262f, #2c2a2e);\r\n}\r\n.header{\r\n    background-image: url(../images/banner2.jpg);\r\n    width: 100%;\r\n    height: 30em;\r\n    background-size: cover;\r\n    text-transform: uppercase;\r\n    .barraNav{\r\n        display: flex;\r\n        justify-content: space-between;\r\n        align-items: center;\r\n        .logo{\r\n        width: 150px;\r\n        height: 150px;\r\n        padding: 15px 15px 0 15px;\r\n        margin-left: 10px;;\r\n        }\r\n        .btnNav{\r\n            \r\n            a{\r\n                text-decoration: none;\r\n                color: blanco;\r\n            }\r\n        }\r\n    }\r\n    \r\n}",
+		"@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');\r\n@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&display=swap');\r\n\r\n$blanco: rgb(255, 255, 255);"
+	],
+	"names": [],
+	"mappings": "AEAA,OAAO,CAAC,4EAAI;AACZ,OAAO,CAAC,yFAAI;;ADDZ,AAAA,IAAI,CAAA;EACA,UAAU,EAAE,UAAU;EACtB,WAAW,EAAE,0BAA0B;EACvC,gBAAgB,EAAE,2IAA2I;CAChK;;;AACD,AAAA,OAAO,CAAA;EACH,gBAAgB,EAAE,0BAA0B;EAC5C,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,eAAe,EAAE,KAAK;EACtB,cAAc,EAAE,SAAS;CAoB5B;;;AAzBD,AAMI,OANG,CAMH,SAAS,CAAA;EACL,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM;CActB;;;AAvBL,AAUQ,OAVD,CAMH,SAAS,CAIL,KAAK,CAAA;EACL,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,gBAAgB;EACzB,WAAW,EAAE,IAAI;CAChB;;;AAfT,AAkBY,OAlBL,CAMH,SAAS,CAUL,OAAO,CAEH,CAAC,CAAA;EACG,eAAe,EAAE,IAAI;EACrB,KAAK,EAAE,MAAM;CAChB"
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>AGUILA NEGRA</title>
+</head>
+<body>
+    <div class="" id="fondoCarrito"></div>
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Ingrese sus datos</h5>
+                </div>
+                <div class="modal-body">
+                    <Form class="modalForm">
+                        <label for="edad">Edad</label>
+                        <input id="edad" type="text">
+                        <div id="mayorEdad"></div>
+                        <label for="nombre">Nombre</label>
+                        <input id="nombre" type="text">
+                        <div id="nombreOk"></div>
+                        <label for="apellido">Apellido</label>
+                        <input id="apellido" type="text">
+                        <div id="apellidoOk"></div>
+                    </Form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btContinuar">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="header" class="header">
+        <div class="barraNav">
+            <img class="logo" src="images/logo.png" alt="logo">
+            <div class="btnNav">
+                <a class="listaNav" id="btInicio" href="#">inicio</a>
+                <a class="listaNav2" id="btPorMayor" href="#">por mayor</a>
+                <a class="listaNav3" id="btContacto" href="#">contacto</a>
+                <div class="listaNav4" id="iconoCarrito"><img src="images/carrito-nav.png" alt="carrito"></div>
+            </div>
+        </div>   
+    </div>
+    <div class="contCarrito activar" id="menuCarrito">
+        <div class="cerrar" id="cerrarCarrito">x cerrar</div>
+        <di class="menuTablaCarrito">
+            <table class="tablaCarrito">
+                <thead>
+                    <tr>
+                        <th>imagen</th>
+                        <th>nombre</th>
+                        <th>precio</th>
+                        <th>cantidad</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="footerCarrito">
+                <div class="precioTotal">
+                    <p class="pValorTotal">valor total:</p>
+                </div>
+                <a id="comprarCarrito" class="comprarCarrito" href="#">comprar</a>
+                <a id="vaciarCarrito" class="vaciarCarrito" href="#">vaciar carrito</a>
+            </div>
+            <img id="imgCarrito" class="imgCarrito" src="images/carrito-animacion.png" alt="carritoAnimacion">
+        </div>
+    </div>
+    <div class="mensaje">
+        <div class="saludo"></div>
+    </div>    
+    <div class="productos">
+        
+    </div>
+    <div id="porMayor" class="porMayor">
+        <div>
+            <img src="images/fondobudweiser.png" alt="imgbudweiser">
+        </div>
+        <div class="form">
+           <form id="formPorMayor">
+                <label for="productos">producto</label>
+                <select class="selectVal" name="producto" id="selectProd">
+                    <option value="">SELECCI0NE LA BEBIDA...</option>
+                    <option value="absolut">ABSOLUT RASPBERRI</option>
+                    <option value="bombay">BOMBAY SAPPHIRE</option>
+                    <option value="jagermeister">JAGERMEISTER</option>
+                    <option value="jackDaniels">JACK DANIEL'S</option>
+                    <option value="sky">SKY</option>
+                    <option value="smirnoff">SMIRNOFF</option>
+                    <option class="fernet" value="fernet">FERNET BRANCA</option>
+                    <option value="gancia">GANCIA</option>
+                    <option value="cerveza">CERVEZA BUDWEISER</option>
+                </select>
+                <label for="cantidad">cantidad</label>
+                <input class="cantidad" type="number" name="cantidad" id="cantidad">
+                <label for="valorTotal">valor total</label>
+                <div id="precioFinal" class="precioFinal"></div>
+                <input class="btnForm" type="submit" value="CALCULAR">
+            </form> 
+        </div>
+        <div class="notificacion">
+            <h2>descuentos:</h2>
+            <p>comprando a partir de 5 unidades<span>5%</span></p>
+            <p>comprando a partir de 10 unidades<span>10%</span></p>
+            <p>comprando a partir de 20 unidades<span>20%</span></p>
+        </div>
+    </div>
+    <div id="contacto" class="contacto">
+        <div class="local">
+            <img src="images/ubicacion.png" alt="ubicacion">
+            <p>Calle Gral. Paz 961</p>
+            <p>Las Varillas, Córdoba</p>
+        </div>
+        <div class="redes">
+            <div class="instagram">
+                <img src="images/logoinsta.png" alt="instagram">
+                <p>@aguilanegra</p>
+            </div>
+            <div class="twitter">
+                <img src="images/logotwitter.png" alt="twitter">
+                <p>@aguilanegra</p>
+            </div>
+            <div class="facebook">
+                <img src="images/logofacebook.png" alt="facebook">
+                <p>@aguilanegra</p>
+            </div>
+        </div>
+        <div class="numero">
+            <div class="wpp">
+                <img src="images/logowpp.png" alt="wpp">
+                <p>03533 - 270397</p>                
+            </div>
+            <div class="mail">
+                <img src="images/mail.png" alt="mail">
+                <p>aguilanegra@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/productos.js"></script>
+</body>
+</html>

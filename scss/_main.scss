@@ -1,0 +1,589 @@
+body{
+    font-family: 'Baloo Tammudu 2', cursive;
+    background-image: linear-gradient(to left bottom, #160b23, #180e26, #1a1028, #1c122b, #1f142e, #21162f, #241930, #261b31, #281f30, #292330, #2b262f, #2c2a2e);
+}
+.modal-content{
+    border-radius: 10px;
+    .modal-body{
+        display: flex;
+        justify-content: center;
+        .modalForm{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            label{
+                margin: 0;
+            }
+            input{
+                height: 27px;
+                padding: 8px 2px 1px 2px;
+                margin-bottom: 5px;
+                border-radius: 10px;
+                border: solid 1px;
+            }
+            .mayorEdad{
+                height: 20px;
+                font-size: 15px;
+                color: rgb(255, 0, 0);
+                margin: 0;
+            }
+        }
+    }
+    .modal-footer{
+        display: flex;
+        button{
+            height: 35px;
+            padding: 9px 12px 4px 12px;
+            background: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border-radius: 15px;
+            border-color: rgb(0, 0, 0);
+            text-transform: uppercase;
+            &:hover{
+                background-color: rgb(150, 150, 150);
+            }
+            &:active{
+                background: rgb(80, 80, 80);
+            }
+        }
+    }
+}
+
+.header{
+    background-image: url(../images/banner1.jpg);
+    width: 100%;
+    height: 30em;
+    background-size: cover;
+    text-transform: uppercase;
+    z-index: 1;
+    .barraNav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 0, 0, .4);
+        position: fixed;
+        .logo{
+        width: 150px;
+        height: 150px;
+        padding: 15px 15px 0 15px;
+        margin-left: 10px;;
+        }
+        .btnNav{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .listaNav{
+                height: 25px;
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+                font-size: 25px;
+                padding: 0 20px 0 0;
+                cursor: pointer;
+                background: linear-gradient(rgb(114, 114, 114), rgb(255, 255, 255));
+                background-position: 0% 95%;
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                transition: background-size 0.3s;
+                &:hover{
+                    background-size: 77% 2px;
+                }
+            }
+            .listaNav2{
+                height: 25px;
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+                font-size: 25px;
+                padding: 0 20px 0 0;
+                cursor: pointer;
+                background: linear-gradient(rgb(114, 114, 114), rgb(255, 255, 255));
+                background-position: 0% 95%;
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                transition: background-size 0.2s;
+                &:hover{
+                    background-size: 87% 2px;
+                }
+            }
+            .listaNav3{
+                height: 25px;
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+                font-size: 25px;
+                padding: 0 20px 0 0;
+                cursor: pointer;
+                background: linear-gradient(rgb(114, 114, 114), rgb(255, 255, 255));
+                background-position: 0% 95%;
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                transition: background-size 0.3s;
+                &:hover{
+                    background-size: 85% 2px;
+                }
+            }
+            .listaNav4{
+                width: 62px;
+                height: 40px;
+                cursor: pointer;
+                transition: 0.3s;
+                display: flex;
+                &:hover{
+                   transform: scale(1.2);
+                }
+                img{
+                    width: 35px;
+                    height: 30px;
+                }
+                .notifiCarrito{
+                    width: 25px;
+                    height: 25px;
+                    font-size: 20px;
+                    padding-top: 3px;
+                    position: relative;
+                    background-color: rgb(172, 1, 1);
+                    color: rgb(255, 255, 255);
+                    text-align: center;
+                    border-radius: 50%;
+                    top: 10px;
+                    right: 5px;
+                }
+            }  
+        }
+    }
+}
+.fondo{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(36, 35, 35, 0.7);
+    transition: all .5s ease;
+    z-index: 2;
+}
+.contCarrito{
+    background: linear-gradient(0deg, rgba(126,125,125,0.9304096638655462) 33%, rgba(210,210,210,1) 80%);
+    box-shadow: 2px 5px 0 2px rgb(116, 117, 118);
+    width: 400px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: all .5s ease;
+    z-index: 3;
+    .cerrar{
+        color: rgb(0, 0, 0);
+        font-size: 22px;
+        text-transform: uppercase;
+        margin: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        background: linear-gradient(rgb(77, 77, 77), rgb(0, 0, 0));
+        background-position: 0% 70%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size 0.3s;
+        &:hover{
+            background-size: 25% 2px;
+        }
+    }
+    .menuTablaCarrito{
+        width: 400px;
+        height: 760px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        text-transform: uppercase;
+        overflow: auto;
+        box-sizing: border-box;
+        .tablaCarrito{
+            width: 95%;
+            thead{
+               
+                tr{
+                    text-align: center;
+                    border-bottom: solid 1px rgb(77, 77, 77);
+                    th{
+                        height: 15px; 
+                    }
+                } 
+            } 
+            tbody{
+                tr{
+                    text-align: center;
+                    .filaCantidad{
+                        height: 95px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        span{
+                            background-color: rgb(255, 255, 255);
+                            width: 20px;
+                            height: 22px;
+                            padding-top: 4px;
+                            border: solid 1px rgb(0, 0, 0);
+                        }
+                        .menos{
+                            background-color: rgb(157, 157, 157);
+                            border-top-left-radius: 10px;
+                            border-bottom-left-radius: 10px;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: rgb(123, 123, 123);
+                            }
+                        }
+                        .mas{
+                            background-color: rgb(157, 157, 157);
+                            border-top-right-radius: 10px;
+                            border-bottom-right-radius: 10px;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: rgb(123, 123, 123);
+                            }
+                        }
+                    }
+                }
+            }
+            .eliminarProducto{
+                font-weight: 700;
+                font-size: 20px;
+                color: rgb(255, 0, 0);
+                padding: 0;
+                text-decoration: none;
+                &:hover{
+                    color: rgb(141, 0, 0);
+                    font-size: 20.2px;
+                    transition: 0.3s;
+                }
+            }
+
+        }
+        .footerCarrito{
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            bottom: 0%;
+            width: 380px;
+            height: 120px;
+            font-size: 18px;
+            color: rgb(33, 37, 41);
+            background: linear-gradient(0deg, rgba(120, 119, 119, 0.9) 0%, rgba(120, 119, 119, 0.9) 0%);
+            .precioTotal{
+                width: 100%;
+                padding: 5px 10px 0 10px;
+                border-top: solid 1px rgb(0, 0, 0);
+                display: flex;
+                justify-content: space-between;
+                p{
+                    width: 100%;
+                    margin: 0;
+                    height: 18px;
+                    font-weight: 700;
+                }
+            }
+            .vaciarCarrito{
+                width: 350px;
+                height: 34px;
+                font-size: 18px;
+                color: rgb(33, 37, 41);
+                background: rgba(126,125,125,0.9304096638655462);
+                border: solid 1px rgb(33, 37, 41);
+                border-radius: 10px;
+                text-align: center;
+                padding: 8px;
+                margin-top: 7px;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: 0.3s;
+                &:hover{
+                    background: rgba(75, 75, 75, 0.93);
+                }
+            }
+            .comprarCarrito{
+                width: 350px;
+                height: 34px;
+                font-size: 18px;
+                color: rgba(126,125,125,0.9304096638655462);
+                background: rgb(33, 37, 41);
+                border: solid 1px rgb(33, 37, 41);
+                border-radius: 10px;
+                text-align: center;
+                padding: 8px;
+                margin-top: 7px;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: 0.3s;
+                &:hover{
+                     background: rgb(85, 86, 87);
+                }
+            }
+        }
+        .imgCarrito{
+            width: 80px;
+            position: absolute;
+            opacity: 0;
+            top: 50%;
+            left: 0px;
+            transition: all .5s ease;
+        }
+        
+    }
+}
+@keyframes animacion {
+    0%{left: 0px;
+        opacity: 1; 
+        transform: skew(40deg);}
+    49%{left: 200px;}    
+    50%{width: 50px;
+        transform: skew(0deg);}
+    60%{top: 48%; 
+        transform: skew(40deg)}
+    65%{top: 50%; 
+        transform: skew(40deg)}
+    100%{left: 1000px; transform: skew(40deg);}    
+}
+.activarCarrito{
+    animation-name: animacion;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+}
+.activar{
+    transform: translate(400px);
+}
+.saludo{
+    height: 90px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.compra{
+    height: 50px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-size: 35px;
+        margin: 0;
+    }
+}
+.productos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .bebida{
+        width: 500px;
+        margin: 10px;
+        background-color: rgba(0, 0, 0, .5);
+        -webkit-box-shadow: 7px 7px 20px 5px rgba(0,0,0,0.4);
+        box-shadow: 7px 7px 20px 5px rgba(0,0,0,0.4);
+        border-radius: 10px;
+        display: flex;
+        .imgBebida{
+            width: 40%;
+        }
+        .datos{
+            width: 60%;
+            height: 100%;
+            font-size: 30px;
+            text-transform: uppercase;
+            color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            .divPrecio{
+                display: flex;
+                color: rgb(103, 193, 209);
+                font-size: 40px;
+                font-weight: 700;
+                font-style: italic;
+            }
+            a{
+                width: 180px;
+                height: 50px;
+                color: rgb(0, 0, 0);
+                background-color: rgb(255, 255, 255);
+                border-radius: 25px;
+                text-transform: uppercase;
+                text-decoration: none;
+                border-style: none;
+                display: flex;
+                justify-content: center;
+                padding: 10px;
+                transition: 0.3s;
+                &:hover{
+                    background-color: rgb(150, 150, 150);
+                }
+            }
+        }
+    }
+}
+.porMayor{
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: space-between;
+    .form{
+        width: 35%;
+        color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        form{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            label{
+                height: 25px;
+                text-transform: uppercase;
+                font-size: 24px;
+                margin: 5px 0 5px 0;
+            }
+            input{
+                height: 40px;
+                font-size: 24px;
+                margin: 5px 0 5px 0;
+                border-radius: 10px;
+                border-style: none;
+                line-height: normal;
+            }
+            select{
+                height: 40px;
+                font-size: 24px;
+                margin: 5px 0 5px 0;
+                border-radius: 10px;
+                border-style: none;
+            }
+            .cantidad{
+                width: 50%;
+                padding-top: 15px;
+            }
+            .btnForm{
+                height: 40px;
+                margin-top: 10px;
+                border-radius: 10px;
+                border-style: none;
+                transition: 0.3s;
+                &:hover{
+                    background-color: rgb(150, 150, 150);
+                }
+            }
+            .precioFinal{
+                width: 50%;
+                height: 40px;
+                background-color: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
+                border-radius: 10px;
+                margin: 5px 0 5px 0;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                p{
+                    height: 24px;
+                    font-size: 24px;
+                    margin: 0;
+                }
+            }   
+        }    
+    }
+    .notificacion{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        font-size: 25px;
+        h2{
+            text-decoration: underline;
+        }
+        p{
+            margin-right: 5px;
+        }
+        span{
+            margin-left: 10px;
+            color: rgb(103, 193, 209);
+            font-size: 35px;
+            font-style: italic;
+        }
+    }
+}
+.contacto{
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(to right top, #000000, #0a0004, #110009, #150110, #170216, #1b041c, #1d0723, #1f0a2a, #260c34, #2e0c3d, #360c47, #3f0b51);
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    .local{
+        width: 33.3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            margin-bottom: 15px;
+        }
+        p{
+            margin: 0;
+        }
+    }
+    .redes{
+        width: 33.3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        .instagram{
+            display: flex;
+            align-items: center;
+            p{
+                margin: 10px 0 0 10px;
+            }
+        }
+        .twitter{
+            display: flex;
+            align-items: center;
+            p{
+                margin: 10px 0 0 10px;
+            }
+        }
+        .facebook{
+            display: flex;
+            align-items: center;
+            p{
+                margin: 10px 0 0 10px;
+            }
+        }
+    }
+    .numero{
+        width: 33.3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        .wpp{
+            width: 324px;
+            display: flex;
+            align-items: center;
+            p{
+                margin: 10px 0 0 10px;
+            }
+        }
+        .mail{
+            display: flex;
+            align-items: center;
+            p{
+                margin: 10px 0 0 10px;
+            }
+        }
+    }
+}

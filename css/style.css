@@ -1,0 +1,689 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&display=swap");
+body {
+  font-family: 'Baloo Tammudu 2', cursive;
+  background-image: linear-gradient(to left bottom, #160b23, #180e26, #1a1028, #1c122b, #1f142e, #21162f, #241930, #261b31, #281f30, #292330, #2b262f, #2c2a2e);
+}
+
+.modal-content {
+  border-radius: 10px;
+}
+
+.modal-content .modal-body {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-content .modal-body .modalForm {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-content .modal-body .modalForm label {
+  margin: 0;
+}
+
+.modal-content .modal-body .modalForm input {
+  height: 27px;
+  padding: 8px 2px 1px 2px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: solid 1px;
+}
+
+.modal-content .modal-body .modalForm .mayorEdad {
+  height: 20px;
+  font-size: 15px;
+  color: red;
+  margin: 0;
+}
+
+.modal-content .modal-footer {
+  display: flex;
+}
+
+.modal-content .modal-footer button {
+  height: 35px;
+  padding: 9px 12px 4px 12px;
+  background: white;
+  color: black;
+  border-radius: 15px;
+  border-color: black;
+  text-transform: uppercase;
+}
+
+.modal-content .modal-footer button:hover {
+  background-color: #969696;
+}
+
+.modal-content .modal-footer button:active {
+  background: #505050;
+}
+
+.header {
+  background-image: url(../images/banner1.jpg);
+  width: 100%;
+  height: 30em;
+  background-size: cover;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.header .barraNav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+}
+
+.header .barraNav .logo {
+  width: 150px;
+  height: 150px;
+  padding: 15px 15px 0 15px;
+  margin-left: 10px;
+}
+
+.header .barraNav .btnNav {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .barraNav .btnNav .listaNav {
+  height: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  padding: 0 20px 0 0;
+  cursor: pointer;
+  background: linear-gradient(#727272, white);
+  background-position: 0% 95%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+
+.header .barraNav .btnNav .listaNav:hover {
+  background-size: 77% 2px;
+}
+
+.header .barraNav .btnNav .listaNav2 {
+  height: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  padding: 0 20px 0 0;
+  cursor: pointer;
+  background: linear-gradient(#727272, white);
+  background-position: 0% 95%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.2s;
+}
+
+.header .barraNav .btnNav .listaNav2:hover {
+  background-size: 87% 2px;
+}
+
+.header .barraNav .btnNav .listaNav3 {
+  height: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  padding: 0 20px 0 0;
+  cursor: pointer;
+  background: linear-gradient(#727272, white);
+  background-position: 0% 95%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+
+.header .barraNav .btnNav .listaNav3:hover {
+  background-size: 85% 2px;
+}
+
+.header .barraNav .btnNav .listaNav4 {
+  width: 62px;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+}
+
+.header .barraNav .btnNav .listaNav4:hover {
+  transform: scale(1.2);
+}
+
+.header .barraNav .btnNav .listaNav4 img {
+  width: 35px;
+  height: 30px;
+}
+
+.header .barraNav .btnNav .listaNav4 .notifiCarrito {
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  padding-top: 3px;
+  position: relative;
+  background-color: #ac0101;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  top: 10px;
+  right: 5px;
+}
+
+.fondo {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(36, 35, 35, 0.7);
+  transition: all .5s ease;
+  z-index: 2;
+}
+
+.contCarrito {
+  background: linear-gradient(0deg, rgba(126, 125, 125, 0.93041) 33%, #d2d2d2 80%);
+  box-shadow: 2px 5px 0 2px #747576;
+  width: 400px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: all .5s ease;
+  z-index: 3;
+}
+
+.contCarrito .cerrar {
+  color: black;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  background: linear-gradient(#4d4d4d, black);
+  background-position: 0% 70%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+
+.contCarrito .cerrar:hover {
+  background-size: 25% 2px;
+}
+
+.contCarrito .menuTablaCarrito {
+  width: 400px;
+  height: 760px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-transform: uppercase;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.contCarrito .menuTablaCarrito .tablaCarrito {
+  width: 95%;
+}
+
+.contCarrito .menuTablaCarrito .tablaCarrito thead tr {
+  text-align: center;
+  border-bottom: solid 1px #4d4d4d;
+}
+
+.contCarrito .menuTablaCarrito .tablaCarrito thead tr th {
+  height: 15px;
+}
+
+.contCarrito .menuTablaCarrito .tablaCarrito tbody tr {
+  text-align: center;
+}
+
+.contCarrito .menuTablaCarrito .tablaCarrito tbody tr .filaCantidad {
+  height: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contCarrito .menuTablaCarrito .tablaCarrito tbody tr .filaCantidad span {
+  background-color: white;
+  width: 20px;
+  height: 22px;
+  padding-top: 4px;
+  border: solid 1px black;
+}
+
+.contCarrito .menuTablaCarrito .tablaCarrito tbody tr .filaCantidad .menos {
+  background-color: #9d9d9d;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+}
+
+.contCarrito .menuTablaCarrito .tablaCarrito tbody tr .filaCantidad .menos:hover {
+  background-color: #7b7b7b;
+}
+
+.contCarrito .menuTablaCarrito .tablaCarrito tbody tr .filaCantidad .mas {
+  background-color: #9d9d9d;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+
+.contCarrito .menuTablaCarrito .tablaCarrito tbody tr .filaCantidad .mas:hover {
+  background-color: #7b7b7b;
+}
+
+.contCarrito .menuTablaCarrito .tablaCarrito .eliminarProducto {
+  font-weight: 700;
+  font-size: 20px;
+  color: red;
+  padding: 0;
+  text-decoration: none;
+}
+
+.contCarrito .menuTablaCarrito .tablaCarrito .eliminarProducto:hover {
+  color: #8d0000;
+  font-size: 20.2px;
+  transition: 0.3s;
+}
+
+.contCarrito .menuTablaCarrito .footerCarrito {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0%;
+  width: 380px;
+  height: 120px;
+  font-size: 18px;
+  color: #212529;
+  background: linear-gradient(0deg, rgba(120, 119, 119, 0.9) 0%, rgba(120, 119, 119, 0.9) 0%);
+}
+
+.contCarrito .menuTablaCarrito .footerCarrito .precioTotal {
+  width: 100%;
+  padding: 5px 10px 0 10px;
+  border-top: solid 1px black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contCarrito .menuTablaCarrito .footerCarrito .precioTotal p {
+  width: 100%;
+  margin: 0;
+  height: 18px;
+  font-weight: 700;
+}
+
+.contCarrito .menuTablaCarrito .footerCarrito .vaciarCarrito {
+  width: 350px;
+  height: 34px;
+  font-size: 18px;
+  color: #212529;
+  background: rgba(126, 125, 125, 0.93041);
+  border: solid 1px #212529;
+  border-radius: 10px;
+  text-align: center;
+  padding: 8px;
+  margin-top: 7px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.contCarrito .menuTablaCarrito .footerCarrito .vaciarCarrito:hover {
+  background: rgba(75, 75, 75, 0.93);
+}
+
+.contCarrito .menuTablaCarrito .footerCarrito .comprarCarrito {
+  width: 350px;
+  height: 34px;
+  font-size: 18px;
+  color: rgba(126, 125, 125, 0.93041);
+  background: #212529;
+  border: solid 1px #212529;
+  border-radius: 10px;
+  text-align: center;
+  padding: 8px;
+  margin-top: 7px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.contCarrito .menuTablaCarrito .footerCarrito .comprarCarrito:hover {
+  background: #555657;
+}
+
+.contCarrito .menuTablaCarrito .imgCarrito {
+  width: 80px;
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 0px;
+  transition: all .5s ease;
+}
+
+@keyframes animacion {
+  0% {
+    left: 0px;
+    opacity: 1;
+    transform: skew(40deg);
+  }
+  49% {
+    left: 200px;
+  }
+  50% {
+    width: 50px;
+    transform: skew(0deg);
+  }
+  60% {
+    top: 48%;
+    transform: skew(40deg);
+  }
+  65% {
+    top: 50%;
+    transform: skew(40deg);
+  }
+  100% {
+    left: 1000px;
+    transform: skew(40deg);
+  }
+}
+
+.activarCarrito {
+  animation-name: animacion;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+
+.activar {
+  transform: translate(400px);
+}
+
+.saludo {
+  height: 90px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.compra {
+  height: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.compra p {
+  font-size: 35px;
+  margin: 0;
+}
+
+.productos {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.productos .bebida {
+  width: 500px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 7px 7px 20px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 7px 7px 20px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  display: flex;
+}
+
+.productos .bebida .imgBebida {
+  width: 40%;
+}
+
+.productos .bebida .datos {
+  width: 60%;
+  height: 100%;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.productos .bebida .datos .divPrecio {
+  display: flex;
+  color: #67c1d1;
+  font-size: 40px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.productos .bebida .datos a {
+  width: 180px;
+  height: 50px;
+  color: black;
+  background-color: white;
+  border-radius: 25px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.productos .bebida .datos a:hover {
+  background-color: #969696;
+}
+
+.porMayor {
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+}
+
+.porMayor .form {
+  width: 35%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.porMayor .form form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.porMayor .form form label {
+  height: 25px;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: 5px 0 5px 0;
+}
+
+.porMayor .form form input {
+  height: 40px;
+  font-size: 24px;
+  margin: 5px 0 5px 0;
+  border-radius: 10px;
+  border-style: none;
+  line-height: normal;
+}
+
+.porMayor .form form select {
+  height: 40px;
+  font-size: 24px;
+  margin: 5px 0 5px 0;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.porMayor .form form .cantidad {
+  width: 50%;
+  padding-top: 15px;
+}
+
+.porMayor .form form .btnForm {
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border-style: none;
+  transition: 0.3s;
+}
+
+.porMayor .form form .btnForm:hover {
+  background-color: #969696;
+}
+
+.porMayor .form form .precioFinal {
+  width: 50%;
+  height: 40px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  margin: 5px 0 5px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.porMayor .form form .precioFinal p {
+  height: 24px;
+  font-size: 24px;
+  margin: 0;
+}
+
+.porMayor .notificacion {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.porMayor .notificacion h2 {
+  text-decoration: underline;
+}
+
+.porMayor .notificacion p {
+  margin-right: 5px;
+}
+
+.porMayor .notificacion span {
+  margin-left: 10px;
+  color: #67c1d1;
+  font-size: 35px;
+  font-style: italic;
+}
+
+.contacto {
+  width: 100%;
+  height: 400px;
+  background-image: linear-gradient(to right top, #000000, #0a0004, #110009, #150110, #170216, #1b041c, #1d0723, #1f0a2a, #260c34, #2e0c3d, #360c47, #3f0b51);
+  display: flex;
+  color: white;
+  font-size: 25px;
+}
+
+.contacto .local {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacto .local img {
+  margin-bottom: 15px;
+}
+
+.contacto .local p {
+  margin: 0;
+}
+
+.contacto .redes {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contacto .redes .instagram {
+  display: flex;
+  align-items: center;
+}
+
+.contacto .redes .instagram p {
+  margin: 10px 0 0 10px;
+}
+
+.contacto .redes .twitter {
+  display: flex;
+  align-items: center;
+}
+
+.contacto .redes .twitter p {
+  margin: 10px 0 0 10px;
+}
+
+.contacto .redes .facebook {
+  display: flex;
+  align-items: center;
+}
+
+.contacto .redes .facebook p {
+  margin: 10px 0 0 10px;
+}
+
+.contacto .numero {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contacto .numero .wpp {
+  width: 324px;
+  display: flex;
+  align-items: center;
+}
+
+.contacto .numero .wpp p {
+  margin: 10px 0 0 10px;
+}
+
+.contacto .numero .mail {
+  display: flex;
+  align-items: center;
+}
+
+.contacto .numero .mail p {
+  margin: 10px 0 0 10px;
+}
